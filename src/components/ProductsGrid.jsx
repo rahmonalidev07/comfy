@@ -1,4 +1,7 @@
+// rrd
 import { useLoaderData, Link } from "react-router-dom"
+
+// utils
 import { formatPrice } from "../utils"
 
 function ProductsGrid() {

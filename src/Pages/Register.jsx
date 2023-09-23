@@ -1,4 +1,7 @@
+// components
 import { FormInput, SubmitBtn } from "../components";
+
+// rrd
 import { Form, Link } from "react-router-dom";
 
 function Register() {

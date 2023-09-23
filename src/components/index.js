@@ -2,8 +2,8 @@ export { default as FormInput } from './FormInput'
 export { default as SubmitBtn } from './SubmitBtn'
 export { default as Header } from './Header'
 export { default as Navbar } from './Navbar'
-
 export { default as ErrorElement } from './ErrorElement'
-
 export { default as SectionTitle } from './SectionTitle'
-export {default as FeaturedProducts} from './FeaturedProducts'
+export { default as FeaturedProducts } from './FeaturedProducts'
+export { default as ProductContainer } from './ProductsContainer'
+export { default as PaginationContainer } from './PaginationsContainer'

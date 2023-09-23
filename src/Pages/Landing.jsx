@@ -1,4 +1,5 @@
-import Hero from '../Pages/Hero'
+import Hero from './Hero'
+// utils
 import { customFetch } from '../utils'
 // components
 import { FeaturedProducts } from '../components'

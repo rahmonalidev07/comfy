@@ -6,6 +6,11 @@ import { formatPrice, customFetch, generateAmountOptions } from "../utils"
 
 // hooks
 import { useState } from "react"
+// react-redux
+import { useDispatch } from "react-redux"
+
+// actions
+import { addItem } from "../features/cart/cartSlice"
 
 export const loader = async ({ params }) => {
   const request = await customFetch(`/products/${params.id}`)
@@ -21,6 +26,24 @@ function SingleProduct() {
   const handleAmount = (e) => {
     setAmount(parseInt(e.target.value))
   }
+  const cartProduct = {
+    cartID: product.id + productColor,
+    productID: product.id,
+    image,
+    title,
+    price,
+    amount,
+    productColor,
+    company
+  }
+
+  const dispatch = useDispatch() 
+
+  const addToCart = () => {
+    dispatch(addItem({product: cartProduct}))
+  }
+
+
   return (
     <section className='align-elements py-20'>
       <div className="text-md breadcrumbs">
@@ -78,7 +101,7 @@ function SingleProduct() {
               </select>
             </div>
             <div className="mt-10">
-              <button className="btn btn-secondary btn-md">Add to bag</button>
+              <button onClick={addToCart} className="btn btn-secondary btn-md">Add to bag</button>
             </div>
           </div>
         </div>

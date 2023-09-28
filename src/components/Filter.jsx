@@ -51,7 +51,7 @@ function Filter() {
       <FormCheckbox
         label="Free shipping"
         name="shipping"
-        size="input-sm"
+        size="checkbox-sm"
         defaultValue={shipping}
       />
       {/* Buttons */}
